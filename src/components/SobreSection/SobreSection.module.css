@@ -1,0 +1,55 @@
+.section {
+  composes: gutter from global;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background: var(--bg);
+}
+
+.inner {
+  composes: container from global;
+  display: grid; grid-template-columns: 1fr 340px;
+  gap: 5rem; align-items: start;
+}
+
+.eyebrow { composes: eyebrow from global; }
+
+.titulo {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 700; letter-spacing: -0.03em;
+  color: var(--ink); margin-bottom: 1.5rem; line-height: 1.1;
+}
+
+.p {
+  font-size: 0.91rem; line-height: 1.85; color: var(--ink2);
+  margin-bottom: 1.15rem;
+}
+.p strong { font-weight: 600; color: var(--ink); }
+
+.link { color: var(--green); font-weight: 500; }
+
+.trayLabel {
+  font-size: 0.6875rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--ink4); margin-bottom: 1rem;
+}
+
+.trayectoria { display: flex; flex-direction: column; }
+
+.trayItem {
+  display: grid; grid-template-columns: 60px 1fr;
+  gap: 0 1rem; padding: 0.9rem 0;
+  border-bottom: 1px solid var(--line); align-items: start;
+}
+.trayItem:last-child { border-bottom: none; }
+
+.trayYear {
+  font-size: 0.6875rem; font-weight: 600;
+  color: var(--ink4); padding-top: 2px;
+}
+
+.trayEmpresa { font-size: 0.8125rem; font-weight: 600; color: var(--ink); margin-bottom: 2px; }
+.trayRol     { font-size: 0.75rem; color: var(--ink3); line-height: 1.4; }
+
+@media (max-width: 720px) {
+  .inner { grid-template-columns: 1fr; gap: 2.5rem; }
+}

@@ -1,0 +1,88 @@
+.banda {
+  composes: gutter from global;
+  background: var(--ink);
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  position: relative; overflow: hidden;
+}
+
+.banda::before {
+  content: 'AI';
+  position: absolute; right: -2rem; top: 50%;
+  transform: translateY(-50%);
+  font-size: 28rem; font-weight: 400;
+  color: rgba(255,255,255,0.03);
+  line-height: 1; pointer-events: none; user-select: none;
+}
+
+.inner {
+  composes: container from global;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 5rem; align-items: center;
+  position: relative; z-index: 1;
+}
+
+/* Eyebrow propio — fondo oscuro */
+.eyebrow {
+  font-size: 0.6875rem; font-weight: 500;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  margin-bottom: 0.75rem;
+  display: flex; align-items: center; gap: 10px;
+}
+.eyebrow::before { content: ''; width: 20px; height: 0.5px; background: rgba(255,255,255,0.2); flex-shrink: 0; }
+
+.h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 400;
+  line-height: 1.2; letter-spacing: -0.01em;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.p {
+  font-size: 0.9375rem; line-height: 1.8;
+  color: rgba(255,255,255,0.55);
+  margin-bottom: 1.5rem;
+}
+
+.pStrong {
+  font-size: 0.9375rem; line-height: 1.8;
+  color: rgba(255,255,255,0.7);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.datoGrande {
+  font-size: 6rem;
+  color: #DDA379; line-height: 1; margin-bottom: 0.25rem;
+}
+
+.datoLabel {
+  font-size: 0.875rem; color: rgba(255,255,255,0.45);
+  margin-bottom: 2rem;
+}
+
+.stack {
+  display: flex; flex-direction: column; gap: 0;
+}
+
+.tool {
+  padding: 1rem 0; border-bottom: 0.5px solid rgba(255,255,255,0.08);
+  display: grid; grid-template-columns: 36px 1fr;
+  gap: 0 1rem; align-items: start;
+}
+.tool:last-child { border-bottom: none; }
+
+.toolIco {
+  font-size: 1rem;
+  color: #DDA379; padding-top: 2px;
+}
+
+.toolTitulo { font-size: 0.8125rem; font-weight: 500; color: white; margin-bottom: 2px; }
+.toolDesc   { font-size: 0.75rem; color: rgba(255,255,255,0.4); line-height: 1.5; }
+
+@media (max-width: 720px) {
+  .inner { grid-template-columns: 1fr; gap: 3rem; }
+  .banda::before { display: none; }
+}

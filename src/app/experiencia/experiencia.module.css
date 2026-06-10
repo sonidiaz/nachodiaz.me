@@ -1,0 +1,122 @@
+.main {
+  padding-top: 60px;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+  composes: container gutter from global;
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+}
+
+.eyebrow { composes: eyebrow from global; }
+
+.titulo {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800; letter-spacing: -0.04em;
+  color: var(--ink); line-height: 1.05; margin-bottom: 1rem;
+}
+
+.sub {
+  font-size: 1rem; line-height: 1.8; color: var(--ink3);
+  max-width: 560px;
+}
+
+/* ÁREAS */
+.areasSection {
+  composes: gutter from global;
+  background: var(--bg2);
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+  border-top: 1px solid var(--line);
+}
+
+.areasInner { composes: container from global; }
+
+.secEyebrow {
+  composes: eyebrow from global;
+  margin-bottom: 2rem;
+}
+
+.areasGrid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1px; background: var(--line);
+}
+
+.areaCard {
+  background: var(--bg2); padding: 2rem 1.75rem;
+  transition: background 0.2s;
+}
+.areaCard:hover { background: #EEEEED; }
+
+.areaTitulo {
+  font-size: 0.875rem; font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink); margin-bottom: 0.6rem; line-height: 1.3;
+}
+
+.areaDesc {
+  font-size: 0.8125rem; line-height: 1.7; color: var(--ink3);
+  margin-bottom: 0.75rem;
+}
+
+.areaEmpresas {
+  display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 0.75rem;
+}
+
+.empresa {
+  font-size: 0.625rem; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--green);
+}
+.empresa:not(:last-child)::after { content: ' ·'; color: var(--ink4); }
+
+/* TRAYECTORIA */
+.traySection {
+  composes: gutter from global;
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+  border-top: 1px solid var(--line);
+}
+
+.trayInner { composes: container from global; }
+
+.trayList { display: flex; flex-direction: column; }
+
+.trayItem {
+  display: grid; grid-template-columns: 220px 1fr;
+  gap: 0 3rem; padding: 2rem 0;
+  border-bottom: 1px solid var(--line); align-items: start;
+}
+.trayItem:last-child { border-bottom: none; }
+
+.trayLeft { padding-top: 2px; }
+
+.trayPeriodo {
+  font-size: 0.6875rem; font-weight: 600;
+  color: var(--ink4); margin-bottom: 0.35rem;
+  letter-spacing: 0.04em;
+}
+
+.trayEmpresa {
+  font-size: 1rem; font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink); margin-bottom: 0.2rem;
+}
+
+.trayRol { font-size: 0.78rem; color: var(--ink3); }
+
+.trayDesc {
+  font-size: 0.875rem; line-height: 1.75; color: var(--ink2);
+  margin-bottom: 0.75rem;
+}
+
+/* SHARED */
+.tags { composes: tagList from global; }
+.tag  { composes: tagItem from global; }
+
+@media (max-width: 720px) {
+  .areasGrid { grid-template-columns: 1fr; }
+  .trayItem { grid-template-columns: 1fr; gap: 0.75rem; }
+}
