@@ -7,10 +7,31 @@
   gap: 1rem;
 }
 
-.copy, .email {
+.copy {
   font-size: 0.72rem;
   color: rgba(255,255,255,0.3);
   letter-spacing: 0.04em;
+}
+
+.socials {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  color: rgba(255,255,255,0.3);
+  transition: color 0.15s, background 0.15s;
+}
+.socialLink:hover {
+  color: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.07);
 }
 
 @media (max-width: 600px) {

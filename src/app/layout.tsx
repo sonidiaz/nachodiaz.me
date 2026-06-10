@@ -8,10 +8,32 @@ const onest = Onest({
   variable: "--font-sans",
 });
 
+const SITE_URL = "https://nachodiaz.me";
+const TITLE = "Nacho Díaz — Software Engineer";
+const DESCRIPTION =
+  "+10 años diseñando y evolucionando plataformas digitales. Especializado en modernización de sistemas legacy, arquitectura React y adopción de IA.";
+
 export const metadata: Metadata = {
-  title: "Nacho Díaz — Software Engineer",
-  description:
-    "+10 años diseñando y evolucionando plataformas digitales. Especializado en modernización de sistemas legacy, arquitectura React y adopción de IA.",
+  title: TITLE,
+  description: DESCRIPTION,
+  icons: {
+    icon: "/favicon--curly.svg",
+  },
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    title: TITLE,
+    description: DESCRIPTION,
+    siteName: "Nacho Díaz",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: TITLE }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: ["/og.png"],
+    creator: "@sonidiaz",
+  },
 };
 
 export default function RootLayout({

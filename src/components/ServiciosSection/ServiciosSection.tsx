@@ -6,7 +6,7 @@ const CARDS = [
     tag: "Mayor valor · Recurrente",
     tagType: "green",
     titulo: "Staff / Arquitecto Frontend",
-    sub: "Liderazgo técnico transversal sin gestión directa de personas",
+    sub: "Liderazgo técnico transversal",
     items: [
       "Modernización incremental de plataformas legacy",
       "Estándares de arquitectura, testing y observabilidad",
@@ -68,7 +68,7 @@ export default function ServiciosSection() {
           Tech con propósito. Cuatro formas de colaborar.
         </h2>
         <p className={`${styles.intro} reveal r2`}>
-          Hay empresas donde la tecnología no es solo el producto — es la forma de cambiar algo
+          Hay empresas donde la tecnología no es solo el producto, es la forma de cambiar algo
           que importa. Eso es lo que me mueve. Trabajo en cuatro niveles según lo que necesite
           el proyecto.
         </p>

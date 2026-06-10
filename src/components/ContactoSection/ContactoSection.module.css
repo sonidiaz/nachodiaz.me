@@ -35,7 +35,7 @@
   transition: color 0.15s;
 }
 .link:last-child { border-bottom: none; }
-.link:hover { color: var(--green); }
+.link:hover { color: var(--amber); }
 
 .linkNombre { font-size: 0.8125rem; font-weight: 600; }
 .linkUrl    { font-size: 0.75rem; color: var(--ink4); }

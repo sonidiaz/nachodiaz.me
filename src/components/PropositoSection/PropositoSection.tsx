@@ -2,17 +2,23 @@ import styles from "./PropositoSection.module.css";
 
 const CARDS = [
   {
+    ico: "News",
+    titulo: "Media & Comunicación",
+    texto: "Plataformas editoriales donde la tecnología sostiene el rigor informativo. Interfaces que presentan la realidad con claridad, sin distorsión.",
+    delay: "",
+  },
+  {
     ico: "Ed",
     titulo: "EdTech",
     texto: "Plataformas de aprendizaje que llegan a millones de estudiantes. La calidad técnica aquí tiene impacto directo en la experiencia educativa.",
     delay: "",
   },
-  {
-    ico: "+",
-    titulo: "HealthTech",
-    texto: "Productos de salud digital donde el rendimiento y la accesibilidad no son opcionales — son parte de la misión.",
-    delay: "r2",
-  },
+  // {
+  //   ico: "+",
+  //   titulo: "HealthTech",
+  //   texto: "Productos de salud digital donde el rendimiento y la accesibilidad no son opcionales sino que son parte de la misión.",
+  //   delay: "r2",
+  // },
   {
     ico: "∿",
     titulo: "Impacto social",
@@ -31,7 +37,7 @@ export default function PropositoSection() {
         </h2>
         <p className={`${styles.intro} reveal r2`}>
           No me da igual el tipo de empresa donde trabajo. Me mueven los proyectos donde la
-          tecnología y la misión se refuerzan — donde construir bien tiene consecuencias reales.
+          tecnología y la misión se refuerzan, donde construir bien tiene consecuencias reales.
         </p>
         <div className={styles.grid}>
           {CARDS.map((c) => (
