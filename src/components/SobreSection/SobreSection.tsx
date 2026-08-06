@@ -33,14 +33,6 @@ export default function SobreSection() {
               el producto en sí. <strong>EdTech, HealthTech, impacto social.</strong> Lugares donde
               construir bien tiene consecuencias reales.
             </p>
-            <p className={styles.p}>
-              Fuera del trabajo colaboro con{" "}
-              <a href="https://lacabrera.eco" target="_blank" rel="noopener noreferrer" className={styles.link}>
-                La Cabrera.eco
-              </a>
-              , un estudio de desarrollo territorial donde aplico el mismo criterio tecnológico
-              a proyectos de arraigo rural e impacto comunitario.
-            </p>
           </div>
 
           <div className="reveal r2">

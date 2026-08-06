@@ -16,9 +16,9 @@ export default function Home() {
       <ServiciosSection />
       <ProyectosSection />
       <CtaBanner />
-      <PropositoSection />
+      {/* <PropositoSection /> */}
       <SobreSection />
-      <SectionLacabrera />
+      {/* <SectionLacabrera /> */}
       <ContactoSection />
       <Footer />
     </RevealProvider>
