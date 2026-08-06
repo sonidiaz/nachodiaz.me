@@ -56,8 +56,10 @@
 }
 
 .datoLabel {
-  font-size: 0.875rem; color: rgba(255,255,255,0.4);
+  font-size: 1.425rem;
+  color: rgba(255, 255, 255, 0.648);
   margin-bottom: 2rem;
+  text-transform: uppercase;
 }
 
 .stack { display: flex; flex-direction: column; }
