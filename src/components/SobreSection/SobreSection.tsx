@@ -5,7 +5,7 @@ const TRAYECTORIA = [
   { year: "2020→23",  empresa: "BeForGet",        rol: "Consultor tecnológico · Plataforma EdTech y comunidad" },
   { year: "2018→20",  empresa: "Minsait / Indra", rol: "Frontend · Machine Learning y biometría" },
   { year: "2018→19",  empresa: "Ernst & Young",   rol: "Frontend Developer · Consultoría tecnológica" },
-  { year: "2012→17",  empresa: "Agencias Chile",  rol: "Desarrollador Web · Raya & Carcavilla" },
+  { year: "2012→16",  empresa: "Agencias Chile",  rol: "Desarrollador Web · Raya & Carcavilla" },
 ];
 
 export default function SobreSection() {
