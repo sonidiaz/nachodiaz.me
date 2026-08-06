@@ -24,7 +24,7 @@ const SOCIALS = [
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <span className={styles.copy}>Nacho Díaz · Frontend Engineer · 2026</span>
+      <span className={styles.copy}>Nacho Díaz · Fullstack Engineer · 2026</span>
       <div className={styles.socials}>
         {SOCIALS.map((s) => (
           <a

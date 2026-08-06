@@ -130,7 +130,7 @@ export const PROYECTOS: Proyecto[] = [
   {
     titulo: "BergMedical — Ecommerce headless",
     cliente: "BergMedical · 2023",
-    descripcion: "Desarrollo Next.js con WooCommerce como headless CMS, SSR para SEO y CI/CD automático en Vercel. Integración de WhatsApp con prellenado dinámico.",
+    descripcion: "Desarrollo Next.js con WooCommerce como headless CMS, arquitectura de API routes y SSR para SEO, y CI/CD automático en Vercel. Integración de WhatsApp con prellenado dinámico.",
     tags: ["Next.js", "WooCommerce", "SSR", "Vercel"],
     categoria: "web",
     featured: true,
@@ -138,7 +138,7 @@ export const PROYECTOS: Proyecto[] = [
   {
     titulo: "CMS para PRATO_DO",
     cliente: "PRATO_DO",
-    descripcion: "Desarrollo del sitio web para organización dedicada a la innovación alimentaria con enfoque social y sostenible.",
+    descripcion: "Desarrollo del sitio web para organización dedicada a la innovación alimentaria con enfoque social y sostenible, con modelado de datos y esquema en PostgreSQL vía Payload CMS.",
     tags: ["Next.js", "Payload CMS", "PostgreSQL"],
     categoria: "web",
     href: "https://pratodo.org",

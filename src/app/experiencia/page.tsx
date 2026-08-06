@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const AREAS = [
   {
-    titulo: "Frontend Development",
+    titulo: "Frontend & Product Engineering",
     tecnologias: ["React", "JavaScript", "TypeScript", "HTML", "CSS"],
     empresas: ["RTVE.es", "Minsait / Indra", "Ernst & Young"],
     desc: "Interfaces que funcionan desde grandes marcas hasta plataformas editoriales de escala nacional. Especializado en React, TypeScript y arquitectura frontend, con integración real de IA en el flujo de desarrollo diario.",

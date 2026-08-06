@@ -11,7 +11,7 @@ const onest = Onest({
 const SITE_URL = "https://nachodiaz.me";
 const TITLE = "Nacho Díaz — Software Engineer";
 const DESCRIPTION =
-  "+10 años diseñando y evolucionando plataformas digitales. Especializado en modernización de sistemas legacy, arquitectura React y adopción de IA.";
+  "+10 años diseñando y evolucionando plataformas digitales. Especializado en modernización de sistemas legacy, arquitectura frontend y backend, APIs y adopción de IA.";
 
 export const metadata: Metadata = {
   title: TITLE,
