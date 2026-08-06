@@ -7,11 +7,10 @@ const LINKS = [
 ];
 
 const DISPONIBILIDAD = [
-  "Posiciones Staff / Senior Frontend",
+  "Senior FullStack Developer",
   "EdTech, HealthTech, impacto social",
   "Remoto o híbrido en España",
-  "Colaboración con La Cabrera.eco en paralelo",
-  "Proyectos freelance puntuales",
+  "Colaboración con La Cabrera.eco",
 ];
 
 export default function ContactoSection() {
@@ -20,10 +19,10 @@ export default function ContactoSection() {
       <div className={styles.inner}>
         <div className="reveal">
           <p className={styles.eyebrow}>Contacto</p>
-          <h2 className={styles.titulo}>¿Construimos<br /><em>algo que importe?</em></h2>
-          <p className={styles.p}>
+          <h2 className={styles.titulo}>Hablemos, <em>te ayudo con tu idea tecnológica</em></h2>
+          {/* <p className={styles.p}>
             Si trabajas en un producto con propósito y buscas a alguien que combine criterio técnico, visión estratégica y experiencia real con IA para aportar desde el primer día, escríbeme.
-          </p>
+          </p> */}
           <div className={styles.links}>
             {LINKS.map((l) => (
               <a
@@ -41,8 +40,8 @@ export default function ContactoSection() {
         </div>
 
         <div className={`${styles.disponible} reveal r2`}>
-          <p className={styles.cdisLabel}>Disponibilidad actual</p>
-          <p className={styles.cdisTitulo}>Abierto a nuevas oportunidades</p>
+          {/* <p className={styles.cdisLabel}>Disponibilidad</p> */}
+          <p className={styles.cdisTitulo}> Fulltime / Partime / Freelance</p>
           <div className={styles.cdisItems}>
             {DISPONIBILIDAD.map((d) => (
               <div key={d} className={styles.cdisItem}>{d}</div>
