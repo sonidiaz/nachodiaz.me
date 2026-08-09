@@ -63,7 +63,7 @@
 
 .btnPrimary {
   font-size: 0.8125rem; font-weight: 600;
-  color: var(--bg); background: var(--ink);
+  color: var(--ink); background: var(--amber);
   padding: 12px 24px; border-radius: 100px;
   text-decoration: none;
   transition: opacity 0.2s;
@@ -116,4 +116,7 @@
     padding: 1rem 0;
   }
   .metric:first-child { border-top: none; padding-top: 0; }
+  .heroMain{
+    padding: 100px 0 4rem;
+  }
 }
