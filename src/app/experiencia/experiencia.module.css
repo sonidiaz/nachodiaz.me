@@ -48,7 +48,7 @@
   background: var(--bg2); padding: 2rem 1.75rem;
   transition: background 0.2s;
 }
-.areaCard:hover { background: #EEEEED; }
+.areaCard:hover { background: #E6E2DB; }
 
 .areaTitulo {
   font-size: 0.875rem; font-weight: 700;
@@ -68,7 +68,7 @@
 .empresa {
   font-size: 0.625rem; font-weight: 600;
   letter-spacing: 0.06em; text-transform: uppercase;
-  color: var(--green);
+  color: var(--amber);
 }
 .empresa:not(:last-child)::after { content: ' ·'; color: var(--ink4); }
 

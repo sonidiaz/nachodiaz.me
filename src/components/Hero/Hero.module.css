@@ -18,8 +18,8 @@
 .status {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 0.75rem; font-weight: 500;
-  color: var(--green);
-  background: #E8F5EE;
+  color: var(--amber);
+  background: var(--amber2);
   padding: 5px 14px; border-radius: 100px;
   margin-bottom: 2.5rem;
   width: fit-content;
@@ -27,7 +27,7 @@
 
 .statusDot {
   width: 7px; height: 7px; border-radius: 50%;
-  background: var(--green);
+  background: var(--amber);
   animation: pulse 2.5s ease infinite;
 }
 
@@ -63,7 +63,7 @@
 
 .btnPrimary {
   font-size: 0.8125rem; font-weight: 600;
-  color: white; background: var(--ink);
+  color: var(--bg); background: var(--ink);
   padding: 12px 24px; border-radius: 100px;
   text-decoration: none;
   transition: opacity 0.2s;

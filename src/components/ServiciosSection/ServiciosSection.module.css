@@ -44,13 +44,13 @@
   position: relative;
 }
 .tab:last-child { border-right: none; }
-.tab:hover:not(.tabActive) { background: #EEEEED; }
+.tab:hover:not(.tabActive) { background: #E6E2DB; }
 
 .tabActive {
   background: var(--ink);
 }
 .tabActive .tabNum { color: rgba(255,255,255,0.25); }
-.tabActive .tabLabel { color: #fff; }
+.tabActive .tabLabel { color: var(--bg); }
 
 .tabNum {
   font-size: 1.5rem;
@@ -98,9 +98,9 @@
   padding: 3px 10px; border-radius: 100px;
   display: inline-block;
 }
-.tagGreen { background: #E8F5EE; color: var(--green); }
+.tagGreen { background: var(--amber2); color: var(--amber); }
 .tagAmber { background: var(--amber2); color: var(--amber); }
-.tagGray  { background: #EBEBEA; color: var(--ink3); }
+.tagGray  { background: var(--bg2); color: var(--ink3); }
 
 .panelTitle {
   font-size: clamp(1.25rem, 2.5vw, 1.75rem);

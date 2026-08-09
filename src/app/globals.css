@@ -7,17 +7,16 @@
      ─────────────────────────────────────────────────── */
   --base-font: 20px;
 
-  --bg:     #FFFFFF;
-  --bg2:    #F6F6F4;
-  --ink:    #0D0D0B;
-  --ink2:   #3D3D3B;
-  --ink3:   #737371;
-  --ink4:   #747474;
-  --green:  #1A6B3C;
-  --amber:  #D97706;
-  --amber2: #FEF3C7;
-  --dark:   #111110;
-  --line:   rgba(0,0,0,0.07);
+  --bg:     #F6F5F3;
+  --bg2:    #ECE9E4;
+  --ink:    #1C1C1C;
+  --ink2:   #565451;
+  --ink3:   #8F8B85;
+  --ink4:   #8F8B85;
+  --amber:  #D99B2B;
+  --amber2: #F0E3CB;
+  --dark:   #1C1C1C;
+  --line:   #E2DED8;
 }
 
 html {
