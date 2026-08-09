@@ -20,17 +20,22 @@
   max-width: 560px; margin-bottom: 2.5rem;
 }
 
-/* Tab bar */
-.tabs {
+/* Tab bar / acordeón */
+.accordion {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  border: 1px solid var(--line);
+
   border-radius: 4px;
   overflow: hidden;
   margin-bottom: 0;
 }
 
+/* En escritorio el wrapper se disuelve: cabeceras y paneles pasan a ser
+   hijos directos del grid. En móvil vuelve a ser un bloque = acordeón. */
+.itemGroup { display: contents; }
+
 .tab {
+  grid-row: 1;
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
@@ -43,7 +48,7 @@
   transition: background 0.15s;
   position: relative;
 }
-.tab:last-child { border-right: none; }
+.itemGroup:last-child .tab { border-right: none; }
 .tab:hover:not(.tabActive) { background: #E6E2DB; }
 
 .tabActive {
@@ -51,6 +56,23 @@
 }
 .tabActive .tabNum { color: rgba(255,255,255,0.25); }
 .tabActive .tabLabel { color: var(--bg); }
+
+.chevron {
+  display: none;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--ink3);
+  border-bottom: 2px solid var(--ink3);
+  transform: rotate(45deg);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  margin-right: 2px;
+}
+.tabActive .chevron {
+  border-color: var(--bg);
+  transform: rotate(-135deg);
+}
 
 .tabNum {
   font-size: 1.5rem;
@@ -68,6 +90,27 @@
 }
 
 /* Panel */
+.panelWrap {
+  grid-row: 2;
+  grid-column: 1 / -1;
+  align-self: start; /* evita que los paneles cerrados se estiren a la altura de la fila */
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+.panelWrapOpen { grid-template-rows: 1fr; }
+
+.panelInner {
+  overflow: hidden;
+  min-height: 0; /* necesario para que 0fr colapse de verdad */
+  visibility: hidden;
+  transition: visibility 0s linear 0.3s;
+}
+.panelWrapOpen .panelInner {
+  visibility: visible;
+  transition-delay: 0s;
+}
+
 .panel {
   border-top: none;
   border-radius: 0 0 4px 4px;
@@ -131,25 +174,47 @@
 /* .item:last-child { border-bottom: none; } */
 .item::before { content: '→'; color: var(--amber); flex-shrink: 0; }
 
+/* En escritorio el cambio de tab es instantáneo, como antes */
+@media (min-width: 721px) {
+  .panelWrap,
+  .panelInner { transition: none; }
+}
+
 @media (max-width: 720px) {
-  .tabs {
-    grid-template-columns: 1fr 1fr;
+  .accordion { display: block; }
+
+  .itemGroup {
+    display: block;
+    border-bottom: 1px solid var(--line);
   }
-  .tab:nth-child(2) { border-right: none; }
-  .tab:nth-child(1),
-  .tab:nth-child(2) { border-bottom: 1px solid var(--line); }
+  .itemGroup:last-child { border-bottom: none; }
+
+  .tab {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    border-right: none;
+  }
+  .tabNum { font-size: 1.125rem; flex-shrink: 0; }
+  .tabLabel { font-size: 0.875rem; flex: 1; }
+  .chevron { display: block; }
+
+  .panel {
+    padding: 0 1.25rem 1.5rem;
+    min-height: 0;
+  }
+  .panelTitle { display: none; } /* duplica la etiqueta de la cabecera */
+  .panelNum { font-size: 2.5rem; }
 
   .items {
     grid-template-columns: 1fr;
   }
-
-  .panelNum { font-size: 2.5rem; }
 }
 
-@media (max-width: 480px) {
-  .tabs {
-    grid-template-columns: 1fr;
-  }
-  .tab { border-right: none; border-bottom: 1px solid var(--line); }
-  .tab:last-child { border-bottom: none; }
+@media (prefers-reduced-motion: reduce) {
+  .panelWrap,
+  .panelInner,
+  .chevron { transition: none; }
 }

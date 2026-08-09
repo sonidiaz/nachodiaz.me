@@ -61,7 +61,6 @@ const CARDS = [
 
 export default function ServiciosSection() {
   const [active, setActive] = useState(0);
-  const card = CARDS[active];
 
   return (
     <section className={styles.section} id="enfoque">
@@ -76,35 +75,43 @@ export default function ServiciosSection() {
           el proyecto.
         </p> */}
 
-        <div className={`${styles.tabs} reveal r2`}>
-          {CARDS.map((c, i) => (
-            <button
-              key={c.num}
-              className={`${styles.tab} ${i === active ? styles.tabActive : ""}`}
-              onClick={() => setActive(i)}
-            >
-              <span className={styles.tabNum}>{c.num}</span>
-              <span className={styles.tabLabel}>{c.titulo}</span>
-            </button>
-          ))}
-        </div>
+        <div className={`${styles.accordion} reveal r2`}>
+          {CARDS.map((c, i) => {
+            const isOpen = i === active;
+            return (
+              <div key={c.num} className={styles.itemGroup}>
+                <button
+                  id={`servicio-tab-${i}`}
+                  className={`${styles.tab} ${isOpen ? styles.tabActive : ""}`}
+                  onClick={() => setActive(i)}
+                  aria-expanded={isOpen}
+                  aria-controls={`servicio-panel-${i}`}
+                >
+                  <span className={styles.tabNum}>{c.num}</span>
+                  <span className={styles.tabLabel}>{c.titulo}</span>
+                  <span className={styles.chevron} aria-hidden="true" />
+                </button>
 
-        <div className={styles.panel}>
-          <div className={styles.panelHeader}>
-            {/* <span
-              className={`${styles.tag} ${styles[`tag${card.tagType.charAt(0).toUpperCase() + card.tagType.slice(1)}` as keyof typeof styles]}`}
-            >
-              {card.tag}
-            </span> */}
-            {/* <div className={styles.panelNum}>{card.num}</div> */}
-          </div>
-          <h3 className={styles.panelTitle}>{card.titulo}</h3>
-          {/* <p className={styles.panelSub}>{card.sub}</p> */}
-          <div className={styles.items}>
-            {card.items.map((item) => (
-              <div key={item} className={styles.item}>{item}</div>
-            ))}
-          </div>
+                <div
+                  id={`servicio-panel-${i}`}
+                  role="region"
+                  aria-labelledby={`servicio-tab-${i}`}
+                  className={`${styles.panelWrap} ${isOpen ? styles.panelWrapOpen : ""}`}
+                >
+                  <div className={styles.panelInner}>
+                    <div className={styles.panel}>
+                      <h3 className={styles.panelTitle}>{c.titulo}</h3>
+                      <div className={styles.items}>
+                        {c.items.map((item) => (
+                          <div key={item} className={styles.item}>{item}</div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
