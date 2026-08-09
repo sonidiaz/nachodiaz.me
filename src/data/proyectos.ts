@@ -14,8 +14,8 @@ export const PROYECTOS: Proyecto[] = [
   {
     titulo: "El arquitecto que aprendió de la naturaleza",
     cliente: "RTVE.es · 2026",
-    descripcion: "Narrativa digital interactiva con componentes React custom sobre biomímesis y arquitectura. Diseño y desarrollo completo en un día con Claude Code.",
-    tags: ["React", "TypeScript", "Claude Code", "Narrativa digital"],
+    descripcion: "Narrativa digital interactiva.",
+    tags: ["React", "TypeScript", "GSAP", "PHP"],
     categoria: "infografias",
     href: "https://www.rtve.es/noticias/20260601/arquitecto-aprendio-naturaleza/17093606.shtml",
     featured: true,
@@ -23,8 +23,8 @@ export const PROYECTOS: Proyecto[] = [
   {
     titulo: "Precio de la vivienda: ¿comprar o alquilar en España?",
     cliente: "RTVE.es · 2025",
-    descripcion: "Módulo interactivo de datos con lógica comparativa compleja, visualizaciones y filtros por comunidad autónoma. Antes: 1 mes. Con IA: 1 día.",
-    tags: ["React", "Vite", "Datos interactivos", "Claude Code"],
+    descripcion: "Módulo interactivo de datos con lógica comparativa compleja, visualizaciones y filtros por comunidad autónoma.",
+    tags: ["React", "Vite", "D3","Observable Plot", "Claude Code"],
     categoria: "infografias",
     href: "https://www.rtve.es/noticias/20251024/precio-vivienda-comprar-alquilar-espana/16783222.shtml",
     featured: true,

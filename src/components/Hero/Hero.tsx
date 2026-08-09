@@ -21,9 +21,9 @@ export default function Hero() {
         </p>
 
         <div className={`${styles.actions} reveal r3`}>
-          <a href="#trabajo" className={styles.btnPrimary}>Ver mi trabajo</a>
-          <Link href="/proyectos" className={styles.btnSecondary}>Ver proyectos</Link>
-          <Link href="/contacto" className={styles.btnSecondary}>Contactar</Link>
+          <a href="#trabajo" className={styles.btnPrimary}>Últimos trabajos</a>
+          {/* <Link href="/proyectos" className={styles.btnSecondary}>Ver proyectos</Link>
+          <Link href="/contacto" className={styles.btnSecondary}>Contactar</Link> */}
         </div>
       </div>
 

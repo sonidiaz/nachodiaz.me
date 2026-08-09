@@ -68,7 +68,7 @@ export default function ServiciosSection() {
       <div className={styles.inner}>
         <p className={`${styles.eyebrow} reveal`}>Dónde aporto valor</p>
         <h2 className={`${styles.title} reveal r2`}>
-          Mis cuatro areas de desarrollo.
+          Cuatro areas de desarrollo.
         </h2>
         {/* <p className={`${styles.intro} reveal r2`}>
           Hay empresas donde la tecnología no es solo el producto, es la forma de cambiar algo

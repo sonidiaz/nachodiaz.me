@@ -92,12 +92,10 @@ export default function ExperienciaPage() {
 
         {/* HEADER */}
         <div className={styles.header}>
-          <p className={`${styles.eyebrow} reveal`}>Trayectoria</p>
-          <h1 className={`${styles.titulo} reveal r2`}>Mi experiencia en tecnología</h1>
+          <p className={`${styles.eyebrow} reveal`}>Experiencia</p>
+          <h1 className={`${styles.titulo} reveal r2`}>Experiencia en tecnología</h1>
           <p className={`${styles.sub} reveal r2`}>
-            12 años transformando ideas en productos digitales. Desde estrategia tecnológica
-            hasta implementación, enfocado en generar valor real para las personas y los negocios.
-          </p>
+            12 años trabajando en productos digitales</p>
         </div>
 
         {/* ÁREAS */}

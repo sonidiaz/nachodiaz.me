@@ -12,7 +12,7 @@ const PROYECTOS = [
   {
     empresa: "LaCabrera.eco",
     titulo: "EcoMap: mapeo de redes de colaboradores por cercanía",
-    desc: "Plataforma web multi-organización que visualiza tu red de colaboradores como un grafo orbital interactivo: la distancia y el tamaño de cada nodo reflejan la intensidad real de la relación, calculada automáticamente a partir de colaboración, proximidad geográfica, frecuencia de contacto y afinidad temática. Incluye proximity scoring con clasificación en órbitas, importación masiva desde Excel con geocodificación y gestión de miembros por roles.",
+    desc: "EcoMap visualiza una red de colaboradores como un grafo orbital: cada actor se posiciona según un proximity score calculado automáticamente y clasificado en órbitas de cercanía.",
     tags: ["Next.js", "TypeScript", "Prisma", "React Flow"],
     href: undefined,
     delay: "",
@@ -20,8 +20,8 @@ const PROYECTOS = [
   {
     empresa: "RTVE.es · 2025",
     titulo: "Precio de la vivienda: ¿comprar o alquilar en España?",
-    desc: "Módulo interactivo de datos con lógica comparativa compleja, visualizaciones y filtros por comunidad autónoma. Antes: 1 mes. Con IA: 1 día.",
-    tags: ["React", "Datos interactivos", "Vite", "Claude Code"],
+    desc: "Módulos interactivos que componen un dashboard de datos en formato narrativa de noticia.",
+    tags: ["React", "D3", "Observable Plot", "Claude Code"],
     href: "https://www.rtve.es/noticias/20251024/precio-vivienda-comprar-alquilar-espana/16783222.shtml",
     delay: "",
   },

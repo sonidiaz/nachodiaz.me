@@ -44,10 +44,10 @@ export default function ProyectosClient() {
 
       {/* HEADER */}
       <div className={styles.header}>
-        <p className={styles.eyebrow}>Trabajos</p>
-        <h1 className={styles.titulo}>Selección de proyectos</h1>
+        <p className={styles.eyebrow}>Proyectos</p>
+        <h1 className={styles.titulo}>Tecnología aplicada</h1>
         <p className={styles.sub}>
-          Mi carrera en tecnología, desde desarrollo web hasta narrativas interactivas.
+          Del desarrollo web a las narrativas digitales
         </p>
       </div>
 
