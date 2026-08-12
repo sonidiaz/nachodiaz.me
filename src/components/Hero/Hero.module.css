@@ -40,9 +40,9 @@
   margin-bottom: 2rem;
 }
 .subHeadline {
-  font-size: clamp(1.2rem, 3.5vw, 2.6rem);
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
   font-weight: 800;
-  line-height: 1;
+  line-height: 2.5rem;
   letter-spacing: -0.04em;
   color: var(--ink);
   margin-bottom: 2rem;
@@ -118,5 +118,11 @@
   .metric:first-child { border-top: none; padding-top: 0; }
   .heroMain{
     padding: 100px 0 4rem;
+  }
+  .subHeadline{
+    line-height: 1.9rem;
+  }
+  .sub{
+    line-height: 1.3;
   }
 }
