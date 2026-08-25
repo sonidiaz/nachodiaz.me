@@ -2,18 +2,18 @@ import styles from "./ProyectosSection.module.css";
 
 const PROYECTOS = [
   {
-    empresa: "RTVE.es",
-    titulo: "API y panel de datos para infografías de RTVE",
-    desc: "Backend en PHP que actúa como API y panel de administración de datos: transforma hojas de cálculo de Google Sheets en JSON servido públicamente, con un dashboard para regenerar y monitorizar cachés y un panel para gestionar las fuentes de datos sin tocar código.",
-    tags: ["PHP", "API", "Backend", "Caché JSON"],
-    href: undefined,
-    delay: "",
-  },
-  {
     empresa: "LaCabrera.eco",
     titulo: "EcoMap: mapeo de redes de colaboradores por cercanía",
     desc: "EcoMap visualiza una red de colaboradores como un grafo orbital: cada actor se posiciona según un proximity score calculado automáticamente y clasificado en órbitas de cercanía.",
     tags: ["Next.js", "TypeScript", "Prisma", "React Flow"],
+    href: undefined,
+    delay: "",
+  },
+  {
+    empresa: "RTVE.es",
+    titulo: "API y panel de datos para infografías de RTVE",
+    desc: "Backend en PHP que actúa como API y panel de administración de datos: transforma hojas de cálculo de Google Sheets en JSON servido públicamente, con un dashboard para regenerar y monitorizar cachés y un panel para gestionar las fuentes de datos sin tocar código.",
+    tags: ["PHP", "API", "Backend", "Caché JSON"],
     href: undefined,
     delay: "",
   },
