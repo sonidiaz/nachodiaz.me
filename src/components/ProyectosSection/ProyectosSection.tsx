@@ -3,8 +3,8 @@ import styles from "./ProyectosSection.module.css";
 const PROYECTOS = [
   {
     empresa: "LaCabrera.eco",
-    titulo: "Óbrbita: El mapa vivo de tu ecosistema",
-    desc: "Óbrbita visualiza una red de colaboradores como un grafo orbital: cada actor se posiciona según un proximity score calculado automáticamente y clasificado en órbitas de cercanía.",
+    titulo: "Órbita: El mapa vivo de tu ecosistema",
+    desc: "Órbita visualiza una red de colaboradores como un grafo orbital: cada actor se posiciona según un proximity score calculado automáticamente y clasificado en órbitas de cercanía.",
     tags: ["Next.js", "TypeScript", "Prisma", "React Flow"],
     href: undefined,
     delay: "",
