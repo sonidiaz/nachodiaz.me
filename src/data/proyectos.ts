@@ -125,9 +125,9 @@ export const PROYECTOS: Proyecto[] = [
     href: "https://www.rtve.es/noticias/20231201/guerra-gaza-diario-testigo-incomodo/2462999.shtml",
   },
   {
-    titulo: "EcoMap: mapeo de redes de colaboradores por cercanía",
+    titulo: "Órbita: El mapa vivo de tu ecosistema",
     cliente: "LaCabrera.eco",
-    descripcion: "EcoMap visualiza una red de colaboradores como un grafo orbital: cada actor se posiciona según un proximity score calculado automáticamente y clasificado en órbitas de cercanía.",
+    descripcion: "Órbita visualiza una red de colaboradores como un grafo orbital: cada actor se posiciona según un proximity score calculado automáticamente y clasificado en órbitas de cercanía.",
     tags: ["Next.js", "TypeScript", "Prisma", "React Flow"],
     categoria: "web",
   },
