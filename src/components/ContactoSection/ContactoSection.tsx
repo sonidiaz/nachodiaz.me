@@ -9,8 +9,7 @@ const LINKS = [
 const DISPONIBILIDAD = [
   "Senior FullStack Developer",
   "EdTech, HealthTech, impacto social",
-  "Remoto o híbrido en España",
-  "Colaboración con La Cabrera.eco",
+  "Remoto desde España",
 ];
 
 export default function ContactoSection() {

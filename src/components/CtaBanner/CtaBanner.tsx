@@ -22,7 +22,7 @@ export default function CtaBanner() {
         </div>
 
         <div className="reveal r2">
-          <p className={styles.datoGrande}>× 100</p>
+          <p className={styles.datoGrande}>× 10</p>
           <p className={styles.datoLabel}>Entregando valor</p>
 
           <div className={styles.stack}>
