@@ -6,6 +6,7 @@ import styles from "./proyectos.module.css";
 const CATEGORIAS: { id: Categoria; label: string }[] = [
   { id: "todos",       label: "Todos" },
   { id: "infografias", label: "Infografías" },
+  { id: "componente",  label: "Componentes" },
   { id: "web",         label: "Desarrollo web" },
   { id: "marketing",   label: "Marketing y prototipos" },
 ];
@@ -15,6 +16,7 @@ const COUNTS: Record<Categoria, number> = {
   infografias: PROYECTOS.filter((p) => p.categoria === "infografias").length,
   web:         PROYECTOS.filter((p) => p.categoria === "web").length,
   marketing:   PROYECTOS.filter((p) => p.categoria === "marketing").length,
+  componente:  PROYECTOS.filter((p) => p.categoria === "componente").length,
 };
 
 const CAT_LABEL: Record<Categoria, string> = {
@@ -22,6 +24,7 @@ const CAT_LABEL: Record<Categoria, string> = {
   infografias: "Infografía",
   web:         "Web",
   marketing:   "Marketing",
+  componente:  "Componente",
 };
 
 export default function ProyectosClient() {
@@ -99,6 +102,26 @@ export default function ProyectosClient() {
                       <line x1="10" y1="14" x2="21" y2="3"/>
                     </svg>
                   </span>
+                )}
+              </div>
+
+              <div className={styles.cardMedia}>
+                {p.imagen ? (
+                  <img
+                    src={p.imagen}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                    className={styles.cardImg}
+                  />
+                ) : (
+                  <div className={styles.cardSkeleton} aria-hidden>
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="3" y="3" width="18" height="18" rx="2" />
+                      <circle cx="9" cy="9" r="1.75" />
+                      <path d="m21 15-5-5-9 9" />
+                    </svg>
+                  </div>
                 )}
               </div>
 

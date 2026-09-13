@@ -1,4 +1,4 @@
-export type Categoria = "todos" | "infografias" | "web" | "marketing";
+export type Categoria = "todos" | "infografias" | "web" | "marketing" | "componente";
 
 export interface Proyecto {
   titulo: string;
@@ -7,50 +7,56 @@ export interface Proyecto {
   tags: string[];
   categoria: Categoria;
   href?: string;
+  imagen?: string;
   featured?: boolean;
 }
 
 export const PROYECTOS: Proyecto[] = [
   {
     titulo: "Precio de la vivienda: ¿comprar o alquilar en España?",
-    cliente: "RTVE.es · 2025",
+    cliente: "RTVE.es",
     descripcion: "Módulos interactivos de tipo dashboard con formato de noticia. Visualización de datos con gráficos y mapas. Integración de API de datos y gestión de filtros dinámicos.",
     tags: ["React", "Vite", "D3","Observable Plot", "IA"],
     categoria: "infografias",
     href: "https://www.rtve.es/noticias/20251024/precio-vivienda-comprar-alquilar-espana/16783222.shtml",
+    imagen: "https://img.rtve.es/i/radiografia-del-precio-vivienda-espana_01775981831198.jpg",
     featured: true,
   },
   {
     titulo: "Zoom-pan-pinch",
-    cliente: "RTVE.es · 2026",
+    cliente: "RTVE.es",
     descripcion: "Visor de imágenes en alta resolución con zoom, desplazamiento y gesto de pinza, y puntos interactivos con información que complementa la noticia.",
     tags: ["React", "TypeScript","IA"],
-    categoria: "infografias",
+    categoria: "componente",
     href: "https://www.rtve.es/noticias/20260813/imagenes-alta-resolucion-eclipse/17189736.shtml",
+    imagen: "https://img.rtve.es/i/composicion-imagenes-nasa-fotografiadas-espana_01786614668082.jpg",
   },
   {
     titulo: "Karaoke (Video + Transcripción Sincronizada)",
-    cliente: "RTVE.es · 2026",
+    cliente: "RTVE.es",
     descripcion: "Componente que, a partir de un vídeo o una pista de audio, genera un karaoke con la transcripción sincronizada palabra a palabra. Componente reutilizable para noticias y reportajes con entrevistas o declaraciones.",
     tags: ["React", "TypeScript", "Video", "Audio"],
-    categoria: "infografias",
+    categoria: "componente",
+    imagen: "/karaoke.webp",
   },
   {
     titulo: "El arquitecto que aprendió de la naturaleza",
-    cliente: "RTVE.es · 2026",
+    cliente: "RTVE.es",
     descripcion: "Narrativa digital interactiva. Con scrolling de imágenes, vídeos y animaciones. Integración de API de datos.",
     tags: ["React", "TypeScript", "GSAP", "PHP"],
     categoria: "infografias",
     href: "https://www.rtve.es/noticias/20260601/arquitecto-aprendio-naturaleza/17093606.shtml",
+    imagen: "https://img.rtve.es/i/fachada-del-nacimiento-sagrada-familia_01780056632861.jpg",
     featured: true,
   },
   {
     titulo: "Componente de vídeo con scroll — Artemis",
-    cliente: "RTVE.es · 2026",
+    cliente: "RTVE.es",
     descripcion: "Componente de vídeo controlado por scroll para el reportaje sobre la misión lunar Artemis de la NASA.",
     tags: ["React", "TypeScript", "Video", "Scrollytelling"],
-    categoria: "infografias",
+    categoria: "componente",
     href: "https://www.rtve.es/noticias/20260216/mision-espacial-luna-artemis-nasa/16940610.shtml",
+    imagen: "https://img.rtve.es/imagenes/mision-espacial-luna-artemis-nasa/01774970556990.png",
   },
   {
     titulo: "Scrollytelling con MapBox — Especial 11M",
@@ -59,6 +65,7 @@ export const PROYECTOS: Proyecto[] = [
     tags: ["React", "Mapbox", "Scrollytelling", "Video"],
     categoria: "infografias",
     href: "https://www.rtve.es/noticias/20240306/11m-mapa-especial-regreso-peor-dia-nuestras-vidas/15995328.shtml",
+    imagen: "https://img.rtve.es/i/11m-imagen-venta-general_01709738381951.jpg",
   },
   {
     titulo: "Scrollytelling Horizontal y GSAP",
@@ -67,14 +74,16 @@ export const PROYECTOS: Proyecto[] = [
     tags: ["React", "GSAP", "Scrollytelling"],
     categoria: "infografias",
     href: "https://www.rtve.es/noticias/20231215/visita-mercado-cena-navidad-aun-mas-cara-este-ano/2467151.shtml",
+    imagen: "/scrollytelling-horizontal-gsap.webp",
   },
   {
     titulo: "Frame a Frame — París 2024",
     cliente: "RTVE.es",
     descripcion: "Módulo de reproducción de secuencias de imágenes con scroll para los Juegos Olímpicos de París 2024, sección mountain bike.",
     tags: ["React", "Canvas", "Olimpiadas"],
-    categoria: "infografias",
+    categoria: "componente",
     href: "https://www.rtve.es/deportes/20240729/resumen-mountain-bike-juegos-olimpicos-paris-2024/16202036.shtml",
+    imagen: "https://img.rtve.es/i/pista-olimpica-mountain-bike-final-masculina_01722270780057.jpg",
   },
   {
     titulo: "Filtro de datos — Composición del Congreso",
@@ -83,6 +92,7 @@ export const PROYECTOS: Proyecto[] = [
     tags: ["React", "Datos interactivos", "Filtros"],
     categoria: "infografias",
     href: "https://www.rtve.es/noticias/20230817/composicion-congreso-diputados/2453798.shtml#inf-filterl",
+    imagen: "/filtro-congreso.webp",
   },
   {
     titulo: "Filtro de datos — Cónclave cardenales",
@@ -91,6 +101,7 @@ export const PROYECTOS: Proyecto[] = [
     tags: ["React", "JavaScript", "Buscador"],
     categoria: "infografias",
     href: "https://www.rtve.es/noticias/20250428/buscador-quienes-son-cardenales-elegiran-nuevo-papa/16471993.shtml",
+    imagen: "https://img.rtve.es/i/quien-quien-cardenales-elegiran-nuevo-papa_01745579621311.jpg",
   },
   {
     titulo: "Drag & Drop y API de vídeo",
@@ -99,6 +110,7 @@ export const PROYECTOS: Proyecto[] = [
     tags: ["React", "Video API", "Drag & Drop"],
     categoria: "infografias",
     href: "https://www.rtve.es/noticias/20230928/productos-alimentos-mas-desperdiciados-espana/2456540.shtml",
+    imagen: "/drag-drop-video-api.webp",
   },
   {
     titulo: "Landing con parallax y canvas — Gaza",
@@ -107,6 +119,7 @@ export const PROYECTOS: Proyecto[] = [
     tags: ["HTML", "CSS", "Canvas", "API"],
     categoria: "infografias",
     href: "https://www.rtve.es/noticias/20241005/muertes-palestinos-victimas-guerra-gaza-israel/16274312.shtml",
+    imagen: "https://img.rtve.es/i/ano-guerra-gaza_01728057628100.jpg",
   },
   {
     titulo: "Mapa de playas interactivo",
@@ -115,14 +128,16 @@ export const PROYECTOS: Proyecto[] = [
     tags: ["React", "Mapas", "UX"],
     categoria: "infografias",
     href: "https://www.rtve.es/noticias/20240725/gran-mapa-playas-espana-buscador/16164854.shtml",
+    imagen: "https://img.rtve.es/i/mapa-playas-espana_01721834516789.jpg",
   },
   {
     titulo: "Videos en autoplay",
     cliente: "RTVE.es",
     descripcion: "Configuración de reproducción automática de vídeo y gestión de audio para reportaje sobre Gaza.",
     tags: ["React", "Video"],
-    categoria: "infografias",
+    categoria: "componente",
     href: "https://www.rtve.es/noticias/20231201/guerra-gaza-diario-testigo-incomodo/2462999.shtml",
+    imagen: "https://img.rtve.es/i/jebreel-abu-kamil-periodista-gaza-testigo-guerra_1701271095896.jpg",
   },
   {
     titulo: "Órbita: El mapa vivo de tu ecosistema",
@@ -130,6 +145,7 @@ export const PROYECTOS: Proyecto[] = [
     descripcion: "Órbita visualiza una red de colaboradores como un grafo orbital: cada actor se posiciona según un proximity score calculado automáticamente y clasificado en órbitas de cercanía.",
     tags: ["Next.js", "TypeScript", "Prisma", "React Flow"],
     categoria: "web",
+    imagen: "/orbita.webp",
   },
   {
     titulo: "API y panel de datos para infografías de RTVE",
@@ -145,6 +161,7 @@ export const PROYECTOS: Proyecto[] = [
     tags: ["Next.js", "React", "TypeScript", "Slack API"],
     categoria: "web",
     href: "https://github.com/sonidiaz/univhack22",
+    imagen: "/glocalhack.webp",
     featured: true,
   },
   {
@@ -154,6 +171,7 @@ export const PROYECTOS: Proyecto[] = [
     tags: ["React", "Slack API", "WordPress"],
     categoria: "web",
     href: "https://thesocialcircle.es",
+    imagen: "/bfg-comunidades.webp",
   },
   {
     titulo: "BeForGet Sonrisa",
@@ -163,13 +181,15 @@ export const PROYECTOS: Proyecto[] = [
     categoria: "web",
     featured: true,
     href: "https://bfg-smile-ll5lf599n.now.sh/",
+    imagen: "/bfg-sonrisa.webp",
   },
   {
     titulo: "BergMedical — Ecommerce headless",
-    cliente: "BergMedical · 2023",
+    cliente: "BergMedical",
     descripcion: "Desarrollo Next.js con WooCommerce como headless CMS, arquitectura de API routes y SSR para SEO, y CI/CD automático en Vercel. Integración de WhatsApp con prellenado dinámico.",
     tags: ["Next.js", "WooCommerce", "SSR", "Vercel"],
     categoria: "web",
+    imagen: "/bergmedical.webp",
     featured: true,
   },
   {
@@ -179,6 +199,7 @@ export const PROYECTOS: Proyecto[] = [
     tags: ["Next.js", "Payload CMS", "PostgreSQL"],
     categoria: "web",
     href: "https://pratodo.org",
+    imagen: "/pratodo.webp",
   },
   {
     titulo: "La Cabrera.eco",
@@ -187,6 +208,7 @@ export const PROYECTOS: Proyecto[] = [
     tags: ["WordPress"],
     categoria: "web",
     href: "https://lacabrera.eco",
+    imagen: "/lacabrera.webp",
   },
   {
     titulo: "AES — Sitio web autoadministrable",
@@ -195,6 +217,7 @@ export const PROYECTOS: Proyecto[] = [
     tags: ["WordPress", "Divi", "React", "React Portals"],
     categoria: "web",
     href: "https://aesiguenza.es",
+    imagen: "/aes.webp",
   },
   {
     titulo: "Citizens.legal",
@@ -202,6 +225,7 @@ export const PROYECTOS: Proyecto[] = [
     descripcion: "Funcionalidades extra mediante WordPress y LearnDash API, automatización de documentos y optimización de servidor.",
     tags: ["WordPress", "LearnDash API", "Make.com", "Cloudways"],
     categoria: "web",
+    imagen: "/citizens-legal.webp",
   },
   {
     titulo: "Weather App",
@@ -210,6 +234,7 @@ export const PROYECTOS: Proyecto[] = [
     tags: ["React", "Redux", "Recharts", "API"],
     categoria: "web",
     href: "https://weather-data-app.vercel.app/",
+    imagen: "/weather-app.webp",
   },
   {
     titulo: "Familia Costa",
@@ -218,6 +243,7 @@ export const PROYECTOS: Proyecto[] = [
     tags: ["HTML", "CSS", "JavaScript"],
     categoria: "marketing",
     href: "https://wordpress-845979-2915621.cloudwaysapps.com/trabajos/famila-costa/",
+    imagen: "/famila-costa.webp",
   },
   {
     titulo: "Reutiliza",
@@ -226,6 +252,7 @@ export const PROYECTOS: Proyecto[] = [
     tags: ["HTML", "CSS", "JavaScript"],
     categoria: "marketing",
     href: "https://wordpress-845979-2915621.cloudwaysapps.com/trabajos/reutiliza/",
+    imagen: "/reutiliza.webp",
   },
   {
     titulo: "Conciencia Celeste",
@@ -234,6 +261,7 @@ export const PROYECTOS: Proyecto[] = [
     tags: ["HTML", "CSS", "JavaScript"],
     categoria: "marketing",
     href: "https://wordpress-845979-2915621.cloudwaysapps.com/trabajos/conciencia-celeste/",
+    imagen: "/conciencia-celeste.webp",
   },
   {
     titulo: "No más cuentos",
@@ -242,6 +270,7 @@ export const PROYECTOS: Proyecto[] = [
     tags: ["HTML", "CSS", "JavaScript"],
     categoria: "marketing",
     href: "https://wordpress-845979-2915621.cloudwaysapps.com/trabajos/nomascuentos.cl/",
+    imagen: "/nomascuentos.webp",
   },
   // {
   //   titulo: "Comunidad de prácticas — Puma & Huawei",

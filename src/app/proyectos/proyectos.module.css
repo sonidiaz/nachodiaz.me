@@ -139,6 +139,7 @@
 .cat_infografias { background: var(--amber2); color: var(--amber); }
 .cat_web         { background: var(--amber2);  color: var(--amber); }
 .cat_marketing   { background: var(--bg2);     color: var(--ink3);  }
+.cat_componente  { background: var(--bg2);     color: var(--amber);  }
 .cat_todos       { background: var(--bg2);     color: var(--ink4);  }
 
 .cardLinkIcon {
@@ -149,6 +150,38 @@
   display: flex;
 }
 .card:hover .cardLinkIcon { opacity: 1; color: var(--amber); }
+
+/* ── CARD MEDIA ── */
+.cardMedia {
+  aspect-ratio: 16 / 9;
+  margin-bottom: 0.9rem;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--bg2);
+  border: 1px solid var(--line);
+}
+
+.cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+.card:not(.cardNoLink):hover .cardImg { transform: scale(1.04); }
+
+/* Skeleton para los proyectos sin imagen: ocupa el mismo hueco 16:9
+   para que el grid no se desalinee. */
+.cardSkeleton {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink4);
+  opacity: 0.45;
+  background: linear-gradient(135deg, var(--bg2), var(--bg));
+}
 
 /* ── CARD BODY ── */
 .cardCliente {

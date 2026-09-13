@@ -5,7 +5,7 @@ export default function SectionLacabrera() {
   return (
     <section className={styles.banner}>
       <Image
-        src="/lacabrera.jpg"
+        src="/lacabrera.webp"
         alt="Paisaje La Cabrera"
         fill
         className={styles.bg}
