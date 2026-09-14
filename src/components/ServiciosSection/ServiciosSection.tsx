@@ -1,7 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import styles from "./ServiciosSection.module.css";
+
+/* El acordeón solo existe por debajo de este ancho (ver el media query del CSS) */
+const MOBILE_QUERY = "(max-width: 720px)";
+const NAV_FALLBACK_HEIGHT = 60;
 
 const CARDS = [
   {
@@ -61,6 +65,39 @@ const CARDS = [
 
 export default function ServiciosSection() {
   const [active, setActive] = useState(0);
+  const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const panelRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  const handleSelect = (next: number) => {
+    const prev = active;
+    setActive(next);
+
+    if (!window.matchMedia(MOBILE_QUERY).matches) return;
+
+    const tab = tabRefs.current[next];
+    if (!tab) return;
+
+    /* Medimos antes de que React repinte: si el panel que se cierra queda por
+       encima del tab pulsado, el tab subirá esa altura al colapsar. */
+    const tabTop = tab.getBoundingClientRect().top;
+    const closing = prev !== next ? panelRefs.current[prev] : null;
+    const shift =
+      closing && closing.getBoundingClientRect().top < tabTop
+        ? closing.offsetHeight
+        : 0;
+
+    const navHeight =
+      document.querySelector("nav")?.getBoundingClientRect().height ??
+      NAV_FALLBACK_HEIGHT;
+    const top = Math.max(0, tabTop + window.scrollY - navHeight - shift);
+
+    window.scrollTo({
+      top,
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "auto"
+        : "smooth",
+    });
+  };
 
   return (
     <section className={styles.section} id="enfoque">
@@ -82,8 +119,9 @@ export default function ServiciosSection() {
               <div key={c.num} className={styles.itemGroup}>
                 <button
                   id={`servicio-tab-${i}`}
+                  ref={(el) => { tabRefs.current[i] = el; }}
                   className={`${styles.tab} ${isOpen ? styles.tabActive : ""}`}
-                  onClick={() => setActive(i)}
+                  onClick={() => handleSelect(i)}
                   aria-expanded={isOpen}
                   aria-controls={`servicio-panel-${i}`}
                 >
@@ -94,6 +132,7 @@ export default function ServiciosSection() {
 
                 <div
                   id={`servicio-panel-${i}`}
+                  ref={(el) => { panelRefs.current[i] = el; }}
                   role="region"
                   aria-labelledby={`servicio-tab-${i}`}
                   className={`${styles.panelWrap} ${isOpen ? styles.panelWrapOpen : ""}`}
